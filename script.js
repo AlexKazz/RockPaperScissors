@@ -4,8 +4,8 @@ let score = 0;
 let compScore = 0;
 let yourScoreDisplay = document.getElementById('yourScoreDisplay');
 let compScoreDisplay = document.getElementById('compScoreDisplay');
-// let winAudio = new Audio("audio/win_audio.mp3");
-// let loseAudio = new Audio("audio/lose_audio.mp3");
+const loseAudio = document.getElementById("loseAudio");
+const winAudio = document.getElementById("winAudio");
 
 function winPlay() {
     winAudio.currentTime=0;
@@ -13,9 +13,11 @@ function winPlay() {
 }
 
 function losePlay() {
+    
     loseAudio.currentTime=0;
     loseAudio.play();
 }
+
 
 function computerPlay() {
     return array[Math.floor(Math.random() * array.length)];
@@ -37,6 +39,7 @@ function playRound() {
             compScore += 0;
             yourScoreDisplay.textContent = 'You: ' + score;
             compScoreDisplay.textContent = 'Computer: ' + compScore;
+            
         } else if (compSelection === 'paper') {
             score += 0;
             compScore += 1;
@@ -94,12 +97,13 @@ function playRound() {
 
     if (compScore === 5 && score < 5) {
         window.location.href = "lose.html";
+        loseAudio.play();
         
         // alert('You lost to the computer! C\'mon, man!');
         // location.reload();
     } else if (score === 5 && compScore < 5) {
         window.location.href = "win.html";
-        
+        winAudio.play();
         // alert('You beat the computer! What are you, a genius?');
         // location.reload();
     }
