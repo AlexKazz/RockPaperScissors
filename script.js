@@ -4,8 +4,9 @@ let score = 0;
 let compScore = 0;
 let yourScoreDisplay = document.getElementById('yourScoreDisplay');
 let compScoreDisplay = document.getElementById('compScoreDisplay');
-const loseAudio = document.getElementById("loseAudio");
-const winAudio = document.getElementById("winAudio");
+let loseAudio = document.getElementById("loseAudio");
+let winAudio = document.getElementById("winAudio");
+console.log(winAudio);
 
 function winPlay() {
     winAudio.currentTime=0;
@@ -13,27 +14,19 @@ function winPlay() {
 }
 
 function losePlay() {
-    
     loseAudio.currentTime=0;
     loseAudio.play();
 }
-
 
 function computerPlay() {
     return array[Math.floor(Math.random() * array.length)];
 } 
 
-
-
 function playRound() {
     let compSelection = computerPlay();
    
-    
-
     if (playerSelection === 'rock') {
         
-        
-
         if (compSelection === 'rock') {
             score += 0;
             compScore += 0;
@@ -96,14 +89,16 @@ function playRound() {
     }
 
     if (compScore === 5 && score < 5) {
-        window.location.href = "lose.html";
         loseAudio.play();
+        window.location.href = "lose.html";
+        
         
         // alert('You lost to the computer! C\'mon, man!');
         // location.reload();
     } else if (score === 5 && compScore < 5) {
-        window.location.href = "win.html";
         winAudio.play();
+        window.location.href = "win.html";
+        
         // alert('You beat the computer! What are you, a genius?');
         // location.reload();
     }
@@ -152,7 +147,6 @@ const rockClick = rockBtn.addEventListener('click', function() {
 
 const paperClick = paperBtn.addEventListener('click', function() {
     playerSelection = 'paper';
-    game();
     game();
     if (checkbox.checked) {
         paperPlay();
