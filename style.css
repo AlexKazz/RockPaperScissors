@@ -1,0 +1,115 @@
+body {
+    font-family: 'Indie Flower', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+    background-color: bisque;
+    
+    
+    /* margin: auto; */
+}
+
+#fight_pic {
+    height: 100px;
+}
+
+#winPage {
+    background: url(pics/win_pic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#losePage {
+    background: url(pics/lose_pic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#buttons {
+    display: flex;
+    height: 40vh;
+    width: 80vw;
+}
+
+button {
+    /* height: 200px;
+    width: 300px; */
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    flex: 1 1 1;
+    font-family: 'Indie Flower', cursive;
+    font-size: 25px;
+}
+
+button:hover {
+    transform: scale(1.1) perspective(1px);
+    transition: 0.15s;
+}
+
+.homeBtn {
+    padding: 15px 40px;
+}
+
+#scores {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+}
+
+#rockBtn {
+    background: url(pics/rockpic.jpg);
+    background-size: cover;
+    flex: 1;
+}
+
+#paperBtn {
+    background: url(pics/paperpic.jpg);
+    background-size: cover;
+    flex: 1;
+}
+
+#scissorsBtn {
+    background: url(pics/scissorspic.png);
+    background-size: cover;
+    flex: 1;
+}
+
+.audioCheck {
+    display: flex;
+    margin: 50px;
+    font-size: 25px;
+    gap: 10px;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #buttons {
+        display: flex;
+        height: 20vh;
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 468px) {
+    #buttons {
+        display: flex;
+        height: 10vh;
+        width: 80vw;
+    }
+}
+
+/* #yourScore {
+    margin-top: 20px;
+    margin-left: 86px;
+}
+
+#compScore {
+    margin-top: 20px;
+    margin-left: 50px;
+} */

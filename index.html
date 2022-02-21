@@ -4,11 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
     <title>Rock Paper Scissors</title>
     <link rel='stylesheet' href=style.css>
-    <script src='script.js'></script>
+    <script src='script.js' defer></script>
+
+    <!-- <img src="pics/fight_pic.jpg" id='fightPic' alt="boxer walking up to ring"> -->
+
 </head>
 <body>
-    <p></p>
+    
+    <div id="buttons">
+        <button id='rockBtn'></button>
+        <button id='paperBtn'></button>
+        <button id='scissorsBtn'></button>
+    </div>
+
+    <div id="scores">
+        <span id="yourScoreDisplay">You:</span>
+        <span id="compScoreDisplay">Computer:</span>
+    </div>
+
+    <div class="audioCheck">
+        <input type="checkbox" id="checkbox">Audio
+    </div>
+
+    <!-- <label id="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label> -->
 </body>
 </html>
